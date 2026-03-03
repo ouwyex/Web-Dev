@@ -1,0 +1,19 @@
+﻿<section class="albums">
+  <h1>Albums</h1>
+
+  <p class="status" *ngIf="loading">Loading albums...</p>
+  <p class="status error" *ngIf="!loading && errorMessage">{{ errorMessage }}</p>
+  <p class="status" *ngIf="!loading && !errorMessage && albums.length === 0">
+    No albums available.
+  </p>
+
+  <ul class="album-list" *ngIf="!loading && !errorMessage && albums.length > 0">
+    <li class="album-item" *ngFor="let album of albums">
+      <a class="album-link" [routerLink]="['/albums', album.id]" (click)="preloadPhotos(album.id)">
+        <span class="album-id">#{{ album.id }}</span>
+        <span class="album-title">{{ album.title }}</span>
+      </a>
+      <button type="button" (click)="deleteAlbum(album.id)">Delete</button>
+    </li>
+  </ul>
+</section>

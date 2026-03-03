@@ -1,0 +1,17 @@
+﻿<section class="album-photos">
+  <h1>Album #{{ albumId }} Photos</h1>
+
+  <p class="status" *ngIf="loading">Loading photos...</p>
+  <p class="status error" *ngIf="!loading && errorMessage">{{ errorMessage }}</p>
+  <button type="button" class="retry-btn" *ngIf="!loading && errorMessage" (click)="loadPhotos()">Retry</button>
+  <p class="status" *ngIf="!loading && !errorMessage && photos.length === 0">No photos found.</p>
+
+  <div class="photo-grid" *ngIf="!loading && !errorMessage && photos.length > 0">
+    <article class="photo-card" *ngFor="let photo of photos">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title" (error)="onImageError($event, photo)" />
+      <p [title]="photo.title">{{ photo.title }}</p>
+    </article>
+  </div>
+
+  <a class="back-link" [routerLink]="['/albums', albumId]">Back</a>
+</section>
