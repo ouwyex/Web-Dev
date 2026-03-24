@@ -1,0 +1,30 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.empty-state {
+  padding: 36px 20px;
+  text-align: center;
+  border: 1px dashed rgba(23, 32, 42, 0.18);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fcfcfb 0%, #f4f6f7 100%);
+}
+
+.empty-state h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #5d6d7e;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

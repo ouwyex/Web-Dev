@@ -1,0 +1,45 @@
+<main class="page-shell">
+  <section class="hero">
+    <p class="eyebrow">Lab 5 Angular Online Store</p>
+    <h1>Browse Kaspi categories and manage products through component input/output.</h1>
+    <p class="hero-copy">
+      Choose a category to open its product list. Likes update instantly, and deleted cards disappear from the current category.
+    </p>
+  </section>
+
+  <section class="category-panel">
+    <div class="section-heading">
+      <h2>Categories</h2>
+      <p>Exactly 4 categories, 5 products in each.</p>
+    </div>
+
+    <div class="category-grid">
+      @for (category of categories; track category.id) {
+        <button
+          type="button"
+          class="category-card"
+          [class.active]="selectedCategoryId === category.id"
+          (click)="selectCategory(category.id)">
+          <span class="category-name">{{ category.name }}</span>
+          <span class="category-meta">{{ productsByCategory[category.id].length }} products</span>
+        </button>
+      }
+    </div>
+  </section>
+
+  @if (selectedCategory) {
+    <section class="products-section">
+      <div class="section-heading">
+        <h2>{{ selectedCategory.name }}</h2>
+        <p>Category to product hierarchy: AppComponent -> ProductListComponent -> ProductItemComponent</p>
+      </div>
+
+      <app-product-list [products]="selectedProducts"></app-product-list>
+    </section>
+  } @else {
+    <section class="welcome-card">
+      <h2>Select a category</h2>
+      <p>Pick one of the four categories above to display its products.</p>
+    </section>
+  }
+</main>

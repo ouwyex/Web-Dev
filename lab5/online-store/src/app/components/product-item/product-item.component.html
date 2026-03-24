@@ -1,0 +1,54 @@
+<article class="product-card">
+  <div class="gallery">
+    <div class="main-image-wrap">
+      <button type="button" class="gallery-nav" (click)="previousImage()" [disabled]="product().images.length < 2">
+        &#8249;
+      </button>
+
+      <img [src]="selectedImage" [alt]="product().name" class="main-image">
+
+      <button type="button" class="gallery-nav" (click)="nextImage()" [disabled]="product().images.length < 2">
+        &#8250;
+      </button>
+    </div>
+
+    <div class="thumb-row">
+      @for (image of product().images; track image) {
+        <button
+          type="button"
+          class="thumb-button"
+          [class.active]="selectedImage === image"
+          (click)="changeImage(image)">
+          <img [src]="image" [alt]="product().name">
+        </button>
+      }
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="top-row">
+      <span class="price">{{ product().price | number }} KZT</span>
+      <span class="likes">&#10084; {{ product().likes }}</span>
+    </div>
+
+    <h3>{{ product().name }}</h3>
+    <p class="description">{{ product().description }}</p>
+
+    <div class="meta">
+      <span class="rating">
+        @for (star of getStars(product().rating); track $index) {
+          <span class="star">&#9733;</span>
+        }
+      </span>
+      <span class="rating-value">{{ product().rating }}/5</span>
+    </div>
+
+    <div class="actions">
+      <a class="action primary" [href]="product().link" target="_blank" rel="noopener noreferrer">Open on Kaspi</a>
+      <button type="button" class="action accent" (click)="likeProduct()">Like</button>
+      <button type="button" class="action danger" (click)="removeProduct()">Delete</button>
+      <button type="button" class="action ghost" (click)="shareWhatsApp()">WhatsApp</button>
+      <button type="button" class="action ghost" (click)="shareTelegram()">Telegram</button>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,15 @@
+@if (visibleProducts.length > 0) {
+  <div class="products-grid">
+    @for (product of visibleProducts; track product.id) {
+      <app-product-item
+        [product]="product"
+        (deleteProduct)="removeProduct($event)">
+      </app-product-item>
+    }
+  </div>
+} @else {
+  <div class="empty-state">
+    <h3>No products in this category</h3>
+    <p>All cards were removed from the selected category.</p>
+  </div>
+}
