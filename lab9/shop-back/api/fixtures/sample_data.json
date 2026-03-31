@@ -1,0 +1,270 @@
+[
+  {
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+      "name": "Smartphones"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+      "name": "Laptops"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 3,
+    "fields": {
+      "name": "Accessories"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 4,
+    "fields": {
+      "name": "Gaming"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "name": "iPhone 15",
+      "price": 999.99,
+      "description": "Apple smartphone with A16 chip and dual camera system.",
+      "count": 12,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "name": "Samsung Galaxy S24",
+      "price": 899.99,
+      "description": "Flagship Android phone with AMOLED display and AI features.",
+      "count": 10,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "name": "Google Pixel 9",
+      "price": 799.99,
+      "description": "Clean Android experience with advanced camera processing.",
+      "count": 14,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 4,
+    "fields": {
+      "name": "OnePlus 12",
+      "price": 749.99,
+      "description": "Fast charging phone with smooth high refresh display.",
+      "count": 9,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "Xiaomi 14",
+      "price": 699.99,
+      "description": "Compact flagship phone with premium build quality.",
+      "count": 11,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "MacBook Air M3",
+      "price": 1299.99,
+      "description": "Lightweight laptop with Apple silicon performance.",
+      "count": 7,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "Dell XPS 13",
+      "price": 1199.99,
+      "description": "Premium ultrabook with InfinityEdge display.",
+      "count": 5,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Lenovo ThinkPad X1 Carbon",
+      "price": 1399.99,
+      "description": "Business laptop with excellent keyboard and durability.",
+      "count": 6,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "HP Spectre x360",
+      "price": 1249.99,
+      "description": "Convertible laptop with OLED screen and touch support.",
+      "count": 4,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "ASUS Zenbook 14",
+      "price": 1099.99,
+      "description": "Portable laptop with long battery life and sleek design.",
+      "count": 8,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 11,
+    "fields": {
+      "name": "Wireless Mouse",
+      "price": 29.99,
+      "description": "Ergonomic Bluetooth mouse for work and travel.",
+      "count": 25,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 12,
+    "fields": {
+      "name": "Mechanical Keyboard",
+      "price": 89.99,
+      "description": "Tactile keyboard with RGB lighting and hot-swap switches.",
+      "count": 17,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 13,
+    "fields": {
+      "name": "USB-C Hub",
+      "price": 49.99,
+      "description": "Multiport adapter with HDMI, USB, and card reader support.",
+      "count": 19,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 14,
+    "fields": {
+      "name": "Noise Cancelling Headphones",
+      "price": 199.99,
+      "description": "Over-ear headphones with immersive audio and ANC.",
+      "count": 13,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 15,
+    "fields": {
+      "name": "Portable SSD 1TB",
+      "price": 129.99,
+      "description": "High-speed external storage for backups and media.",
+      "count": 15,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 16,
+    "fields": {
+      "name": "PlayStation 5",
+      "price": 499.99,
+      "description": "Next-generation console with fast SSD and ray tracing.",
+      "count": 6,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 17,
+    "fields": {
+      "name": "Xbox Series X",
+      "price": 499.99,
+      "description": "Powerful gaming console with 4K support.",
+      "count": 5,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 18,
+    "fields": {
+      "name": "Nintendo Switch OLED",
+      "price": 349.99,
+      "description": "Hybrid console with vibrant OLED display.",
+      "count": 9,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 19,
+    "fields": {
+      "name": "Gaming Chair",
+      "price": 219.99,
+      "description": "Adjustable chair with lumbar support for long sessions.",
+      "count": 7,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 20,
+    "fields": {
+      "name": "4K Gaming Monitor",
+      "price": 399.99,
+      "description": "High refresh monitor with vivid colors and low latency.",
+      "count": 6,
+      "is_active": true,
+      "category": 4
+    }
+  }
+]
